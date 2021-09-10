@@ -71,7 +71,7 @@ const App = () => {
       setBalanceOfdai(balanceOfDai);
 
       setDaiContract(daitokencontract)
-      const devtokencontract = new web3.eth.Contract(TokenAbi.abi,Address.doge);
+      const devtokencontract = new web3.eth.Contract(dogetokensaleabi.abi,Address.doge);
       const nameoftoken = await devtokencontract.methods.name().call();
      
       // decimal 
