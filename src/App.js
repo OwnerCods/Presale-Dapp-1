@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Web3 from "web3";
 import Navbar from "./Navbar";
 import TokenAbi from './contracts/Tokenabi.json';
-import dogetokensaleabi from './contracts/dogetokensale.json'
+import Dogetokensaleabi from './contracts/dogetokensale.json'
 import Address from './contracts/address.json';
 
 const App = () => {
@@ -71,7 +71,7 @@ const App = () => {
       setBalanceOfdai(balanceOfDai);
 
       setDaiContract(daitokencontract)
-      const devtokencontract = new web3.eth.Contract(dogetokensaleabi.abi,Address.doge);
+      const devtokencontract = new web3.eth.Contract(Dogetokensaleabi.abi,Address.doge);
       const nameoftoken = await devtokencontract.methods.name().call();
      
       // decimal 
